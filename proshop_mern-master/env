@@ -1,0 +1,3 @@
+NODE_ENV =development
+PORT= 5000
+MONGO_URI = mongodb+srv://Swarnim:proshop123@proshop.7hob5.mongodb.net/proshop?retryWrites=true&w=majority
