@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include<string.h>
+
+struct Employee{
+    
+    
+    int Basic_Salary;
+    int Emp_id;
+    char Emp_Name[100];
+    int day,mon,year;
+    int net_salary;
+   
+   
+};
+
+int main()
+{
+    int n;
+    printf("Enter number of employees\n");
+    scanf("%d",&n);
+    struct Employee E[n];
+    
+   for( int i =0; i<n; i++)
+   {
+       printf("\nEnter employee id\n");
+       scanf("%d",&E[i].Emp_id);
+       
+       printf("Enter name of employee number %d\n",E[i].Emp_id);
+       
+       scanf("%s",E[i].Emp_Name);
+       
+       printf("Enter salary of employee %s\n",E[i].Emp_Name);
+       scanf("%d",&E[i].Basic_Salary);
+       
+       printf("Enter hire date\n");
+       scanf("%d%d%d",&E[i].day,&E[i].mon, &E[i].year);
+       
+       printf("-----------------------------------\n");
+        printf("-----------------------------------\n");
+   }
+   
+   for(int i =0; i<n; i++)
+   {
+       int net = 0.4 * E[i].Basic_Salary + 0.1 * E[i].Basic_Salary + 0.05 * E[i].Basic_Salary;
+       E[i].net_salary = net;
+   }
+   
+ 
+   
+   for( int i =0; i<n; i++)
+   {
+       
+       printf("Employee Name: %s\n",E[i].Emp_Name);
+      
+       printf("Basic Salary: %d\n",E[i].Basic_Salary);
+       
+       printf("Employee Id: %d\n",E[i].Emp_id);
+       
+       printf("Hire date: %d %d %d\n",E[i].day,E[i].mon, E[i].year);
+       
+       printf("Net Salary:%d\n", E[i].net_salary);
+       
+       printf("-----------------------------------\n");
+        printf("-----------------------------------\n");
+       
+       
+     
+       
+   }
+   
+    return 0;
+}
